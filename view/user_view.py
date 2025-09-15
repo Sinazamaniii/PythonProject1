@@ -1,28 +1,18 @@
 from tkinter import *
-#import tkinter.ttk as ttk
 import tkinter.messagebox as msg
 
-from database.database_manager import save_username
+from data_access.database_manager import save_username
 from tools.validation import *
-
-
-
 
 def save_click():
     try:
         username_validator(username.get())
         password_validator(password.get())
         nickname_validator(nickname.get())
-        save_username(username.get(),password.get(),nickname_validator())
+        save_username(username.get(),password.get(),nickname.get(), locked.get())
         msg.showinfo("Save", "Person saved")
     except Exception as e:
         msg.showerror("Error", f"{e}")
-
-
-
-
-
-
 
 
 window = Tk()
