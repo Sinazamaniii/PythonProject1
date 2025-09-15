@@ -1,5 +1,5 @@
 from tkinter import *
-import tkinter.ttk as ttk
+#import tkinter.ttk as ttk
 import tkinter.messagebox as msg
 
 from database.database_manager import save_username
@@ -40,6 +40,8 @@ password = StringVar()
 Label(window, text="password").place(x=20, y=60)
 Entry(window, textvariable=password, show= "*").place(x=100, y=60)
 
+
+#nickname
 nickname = StringVar()
 Label(window, text="Nickname").place(x=20, y=80)
 Entry(window, textvariable=nickname).place(x=100, y=80)
